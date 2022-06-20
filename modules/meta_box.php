@@ -96,8 +96,7 @@ add_Action('admin_init',  function (){
 
 	$all_posts = get_posts( [
 		'post_type' => $post_type,
-		'showposts' => -1,
-		'post_not__in' => [ $_GET['post'] ]
+		'showposts' => -1
 	]);
 	
 

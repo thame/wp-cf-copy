@@ -73,10 +73,11 @@ if( !class_exists('vooAddStylesSync') ){
 add_Action('init', function(  ){
 		$scripts_list = array(
 		'common' => array(
-			array( 'type' => 'style', 'url' => plugins_url('/inc/assets/css/tw-bs4.css', __FILE__ ) ),
+			
 			//array( 'type' => 'style', 'url' => plugins_url('/inc/fa/css/font-awesome.min.css', __FILE__ ) ),
 		),
 		'admin' => array(
+			array( 'type' => 'style', 'url' => plugins_url('/inc/assets/css/tw-bs4.css', __FILE__ ) ),
 			/*
 				array( 'type' => 'script', 'url' => plugins_url('/inc/jscolor/jscolor.js', __FILE__ ), 
 				*/
@@ -98,24 +99,7 @@ add_Action('init', function(  ){
 			array( 'type' => 'style', 'url' => plugins_url('/css/admin.css', __FILE__ ) ),
 		),
 		'front' => array(
-			/*
-			array( 'type' => 'style', 'url' => plugins_url('/inc/fb/dist/jquery.fancybox.css', __FILE__ )),
-			array( 'type' => 'script', 'url' => plugins_url('/inc/fb/dist/jquery.fancybox.js', __FILE__ ), 'enq' => array( 'jquery' ) ),
-			*/
-	 
-
-			array( 
-				'type' => 'script', 
-				'url' => plugins_url('/js/front.js', __FILE__ ), 
-				'enq' => array( 'jquery' ), 
-				'localization' => array( 
-				'add_url' => get_option('home').'/wp-admin/post-new.php?post_type=event',
-				'nonce' => wp_create_nonce( 'ajax_call_nonce' ),
-				'ajaxurl' => admin_url('admin-ajax.php')
-				)
-			),
-
-			array( 'type' => 'style', 'url' => plugins_url('/css/front.css', __FILE__ ) ),
+			 
 		)
 	);
 

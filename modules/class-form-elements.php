@@ -140,6 +140,16 @@ if( !class_exists('formElementsClassCFCopy') ){
 					</div>
 						';
 				break;
+				case "alert":
+						$out .= '
+					<div class="'.( $this->parameters['width'] ? $this->parameters['width'] : 'col-12' ).'">
+						<div class="form-group">  
+							<div class="alert alert-info">'.$this->parameters['text'].'</div><!-- /.alert alert-info -->
+							
+						</div> 
+					</div>
+						';
+				break;
 				case "select":
 						$out .= '
 					<div class="'.( $this->parameters['width'] ? $this->parameters['width'] : 'col-12' ).'">
